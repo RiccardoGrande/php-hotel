@@ -66,7 +66,14 @@ foreach ($hotels as $key => $value) {
 
 <form action="myscript.php" method="get">
     <?php if ($value['parking'] === true): ?>
-        <select name="parking" id="parking" disabled="disabled"><?=$value['parking'];?></select>
+
+        <div class="form-group">
+
+            <label for="my-select">Parking</label>
+            <select id="my-select" class="form-control" name="my-select">
+                <option><?=$value['parking'];?></option>
+            </select>
+        </div>
     <?php endif;?>
 
 </form>
