@@ -40,4 +40,9 @@ $hotels = [
 
 ];
 
-echo $hotels['array']['name'];
+$group_array = $hotels;
+
+foreach ($group_array as $key => $value) {
+
+    echo $key . $value;
+}
