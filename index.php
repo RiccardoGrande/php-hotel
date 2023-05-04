@@ -40,7 +40,4 @@ $hotels = [
 
 ];
 
-foreach ($hotels as $key => $value) {
-
-    echo $key . $value;
-}
+echo $hotels['array']['name'];
