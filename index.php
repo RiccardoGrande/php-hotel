@@ -64,7 +64,7 @@ foreach ($hotels as $key => $value) {
 <body>
 <div class="container">
 
-    <table class="table">
+    <table class="table text-center">
         <thead>
             <tr>
             <th scope="col">#</th>
@@ -76,26 +76,19 @@ foreach ($hotels as $key => $value) {
             </tr>
         </thead>
         <tbody>
+             <?php foreach ($hotels as $key => $value): ?>
             <tr>
-            <?php foreach ($hotels as $key => $value): ?>
-            <th scope="row">1</th>
-            <td><?=$value['name'];?></td>
-            </tr>
-            <?php endforeach;?>
-            <tr>
-            <?php foreach ($hotels as $key => $value): ?>
-            <th scope="row">2</th>
-            <td><?=$value['description'];?></td>
+
+                <th scope="row">1</th>
+                    <td><?=$value['name'];?></td>
+                    <td><?=$value['description'];?></td>
+                    <td><?=$value['parking'];?></td>
+                    <td><?=$value['vote'];?></td>
+                    <td><?=$value['distance_to_center'];?></td>
 
             </tr>
             <?php endforeach;?>
-            <tr>
-            <?php foreach ($hotels as $key => $value): ?>
-            <th scope="row">3</th>
-            <td><?=$value['parking'];?></td>
 
-            </tr>
-            <?php endforeach;?>
         </tbody>
     </table>
 
