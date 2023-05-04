@@ -71,9 +71,13 @@ foreach ($hotels as $key => $value) {
 
             <label for="my-select">Parking</label>
             <select id="my-select" class="form-control" name="my-select">
-                <option><?=$value['parking'];?></option>
+                <option><?=$value['name'];?></option>
+                <option><?=$value['name'];?></option>
+                <option><?=$value['name'];?></option>
             </select>
         </div>
+    <?php elseif ($value['parking'] === false): ?>
+        <div>no parking</div>
     <?php endif;?>
 
 </form>
